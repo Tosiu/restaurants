@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant picker</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="header">{{ message }}</div>
+                {% endfor %}
+            {% else %}
+                <div class="header ">Restaurant picker</div>
+                <div class="description">
+                    Tired of eating same meal every day?<br>
+                    Our app will pick you a new restaurant for you<br>so you never get bored.
+                </div>
+            {% endif %}
+
+            <div class="form">
+                <input type="text" name="login-form" autocomplete="off" required />
+                <label for="name" class="label-name">
+                    <span class="content-name">Username</span>
+                </label>
+            </div>
+            <div class="form">
+                <input type="password" name="login-form" autocomplete="off" required />
+                <label for="name" class="label-name">
+                    <span class="content-name">Password</span>
+                </label>
+            </div>
+            <div class="btn btn-right btn-login">
+                <p>Login</p>
+            </div>
+        </div>
+
+    </div>
+    {% csrf_token %}
+    <script src="{% static 'core/js/login.js' %}"></script>
+    <script src="{% static 'core/js/popup.js' %}"></script>
+</body>
+</html>

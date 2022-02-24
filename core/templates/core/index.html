@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant picker</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    <div class="content">
+        {% csrf_token %}
+        <div class="btn btn-logout">
+            <p>Sign out</p>
+        </div>
+        <div class="container">
+            <div class="header">Restaurant picker</div>
+            <div class="description">
+                Tired of eating same meal every day?<br>
+                Our app will pick you a new restaurant for you<br>so you never get bored.
+            </div>
+            <div class="btn-container">
+                <div class="btn">
+                    <p>Add a restaurant</p>
+                </div>
+                <div class="btn">
+                    <p>Pick a restaurant</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'core/js/logout.js' %}"></script>
+    <script src="{% static 'core/js/index.js' %}"></script>
+    <script src="{% static 'core/js/popup.js' %}"></script>
+</body>
+</html>

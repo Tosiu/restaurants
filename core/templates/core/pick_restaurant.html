@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant picker</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    <div class="content">
+        {% csrf_token %}
+        <div class="btn btn-logout">
+            <p>Sign out</p>
+        </div>
+        <div class="container">
+            <div class="header"></div>
+            <div class="description"></div>
+            <div class="description"></div>
+            <div class="description"></div>
+            <div class="btn-container">
+                <div id="back-to-home" class="btn">
+                    <p>Go back</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'core/js/logout.js' %}"></script>
+    <script src="{% static 'core/js/pick_restaurant.js' %}"></script>
+    <script src="{% static 'core/js/popup.js' %}"></script>
+</body>
+</html>
